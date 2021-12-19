@@ -3,6 +3,7 @@
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
     --section-padding: 100px;
+    --main-transition: 0.3s;
 }
 /* End Variables */
 
@@ -129,11 +130,11 @@ header .container::after {
 }
 header .logo img {
     height: 40px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 header .logo img:hover {
     transform: rotate(-5deg);
@@ -182,11 +183,11 @@ header nav ul li a {
     display: block;
     text-decoration: none;
     padding: 40px 10px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
     color: white;
 }
 header nav ul li .active,
@@ -213,11 +214,11 @@ header nav .form i {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 header nav .form i:hover {
     color: var(--main-color);
@@ -292,11 +293,11 @@ header nav .form i:hover {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 @media (max-width: 767px) {
     .landing .change-background {
@@ -334,11 +335,11 @@ header nav .form i:hover {
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     margin-right: 10px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .landing .bullets li.active {
     background-color: var(--main-color);
@@ -473,11 +474,11 @@ header nav .form i:hover {
     text-decoration: none;
     color: #000;
     padding: 15px 20px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .portfolio .shuffle li a.active {
     color: white;
@@ -509,11 +510,11 @@ header nav .form i:hover {
 }
 .portfolio .gallery .box img {
     max-width: 100%;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .portfolio .gallery .box:hover img {
     transform: rotate(5deg) scale(1.1);
@@ -529,11 +530,11 @@ header nav .form i:hover {
     position: absolute;
     bottom: -100%;
     left: 0;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .portfolio .gallery .box:hover .caption {
     bottom: 0;
@@ -561,7 +562,11 @@ header nav .form i:hover {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .portfolio .more:hover {
     cursor: pointer;
@@ -622,11 +627,11 @@ header nav .form i:hover {
     padding: 15px 25px;
     background-color: #000;
     border: none;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .video .text button:hover {
     cursor: pointer;
@@ -805,11 +810,11 @@ header nav .form i:hover {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .our-skills .testimonials .bullets li.active,
 .our-skills .testimonials .bullets li:hover {
@@ -830,10 +835,15 @@ header nav .form i:hover {
     background-color: #dedadc;
 }
 .our-skills .skills .prog-holder .prog span {
+    position: relative;
     display: block;
     height: 100%;
     background-color: var(--main-color);
-    position: relative;
+    transition: 2.5s;
+    -webkit-transition: 2.5s;
+    -moz-transition: 2.5s;
+    -ms-transition: 2.5s;
+    -o-transition: 2.5s;
 }
 .our-skills .skills .prog-holder .prog span::before {
     content: attr(data-progress);
@@ -857,3 +867,50 @@ header nav .form i:hover {
     border-color: #000 transparent transparent;
 }
 /* End Skills */
+
+/* Start Footer */
+.footer {
+    position: relative;
+    padding: calc(var(--section-padding) / 2) 0;
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color:rgb(0 0 0 / 50%);
+}
+.footer .container {
+    position: relative;
+}
+.footer img {
+    margin-bottom: 30px;
+}
+.footer p:not(.copyright) {
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid white;
+}
+.footer .social-icons a {
+    color: #19c9fae1
+}
+.footer .social-icons a i {
+    padding: 10px 15px;
+}
+.footer .copyright {
+    margin-top: 60px;
+}
+.footer .copyright span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* End Footer */
