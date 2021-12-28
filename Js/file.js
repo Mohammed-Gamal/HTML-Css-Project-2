@@ -5,7 +5,7 @@ let section = document.querySelector(".our-skills");
 
 let nums = document.querySelectorAll(".stats .number");
 let statsSection = document.querySelector(".stats");
-let started = false; // Function Started ? No
+let started = false; // function started? no
 
 window.onscroll = function () {
     // Skills Animate Width
