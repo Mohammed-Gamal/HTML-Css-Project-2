@@ -110,26 +110,48 @@ ul {
 }
 /* End Global */
 
+/* Start Scrollbar Customization (Note: Non-standard) */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #bbbbbb; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #19c9fac5; 
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--transparent-color);
+}
+/* End Scrollbar Customization */
+
 /* Start go-up button */
 .go-up {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  z-index: 5;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 5;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
 
 .go-up i {
-  color: var(--main-color);
-  font-size: 30px;
+    color: var(--main-color);
+    font-size: 30px;
 }
 
 .go-up:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 /* End go-up button */
 
@@ -514,6 +536,15 @@ header nav .form i:hover {
     color: white;
     background-color: var(--main-color);
 }
+@media (max-width: 450px) {
+    .portfolio .shuffle {
+        font-size: 12px;
+    }
+    
+    .portfolio .shuffle li a {
+        padding: 10px 15px;
+    }
+}
 .portfolio .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -576,8 +607,8 @@ header nav .form i:hover {
 .portfolio .more {
     display: block;
     width: fit-content;
-    padding: 20px 30px;
-    margin: 60px auto;
+    padding: 18px 45px;
+    margin: 60px auto 0;
     color: white;
     font-size: 25px;
     background-color: var(--main-color);
@@ -893,11 +924,394 @@ header nav .form i:hover {
 }
 /* End Skills */
 
+/* Start Quote */
+.quote {
+    position: relative;
+    padding: var(--section-padding) 0;
+    background-image: url("../images/quote.jpg");
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.quote::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+.quote .container {
+    position: relative;
+}
+.quote q {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote q::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+    position: absolute; 
+    top: -45px;
+    font-weight: bold;
+}
+.quote q::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    position: absolute; 
+    bottom: -45px;
+    font-weight: bold;
+}
+@media (max-width: 991px) {
+    .quote q::before {
+        top: -50px;
+        left: -5px;
+    }
+    .quote q::after {
+        bottom: -50px;
+        right: -5px;
+    }
+}
+@media (min-width: 992px) {
+    .quote q::before {
+        left: 5px;
+    }
+    .quote q::after {
+        right: 5px;
+    }
+}
+@media (min-width: 1205px) {
+    .quote q::before {
+        left: 10px;
+    }
+    .quote q::after {
+        right: 10px;
+    }
+}
+/* End Quote */
+
+/* Start Pricing */
+.pricing {
+    padding: var(--section-padding) 0;
+}
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pricing .plans .plan {
+    background-color: #fcfcfc;
+    text-align: center;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.pricing .plans .plan:hover {
+    transform: translateY(-10px) scale(1.007);
+    -webkit-transform: translateY(-10px) scale(1.007);
+    -moz-transform: translateY(-10px) scale(1.007);
+    -ms-transform: translateY(-10px) scale(1.007);
+    -o-transform: translateY(-10px) scale(1.007);
+    box-shadow: 1px 1px 5px 0 #eee;
+}
+.pricing .plans .plan .head {
+    padding: 40px 0;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head h3 {
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.pricing .plans .plan .head span {
+    font-weight: bold;
+    font-size: 45px;
+}
+.pricing .plans .plan .head span::before {
+    content: "$";
+    font-weight: normal;
+    font-size: 25px;
+    position: relative;
+    top: -20px;
+    left: -15px;
+}
+.pricing .plans .plan .head span::after {
+    content: "/Mo";
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+}
+.pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+    padding: 20px 0;
+    position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: calc((100% / 2) + 60px);
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 0;
+    background-color: var(--main-color);
+}
+.pricing .plans .plan .foot a {
+    display: block;
+    width: fit-content;
+    padding: 15px 35px;
+    margin: 25px auto;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.pricing .plans .plan .foot a:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+.pricing .contact-text {
+    width: fit-content;
+    margin: 50px auto 25px;
+    font-size: 20px;
+}
+.pricing .contact-link {
+    display: block;
+    width: fit-content;
+    padding: 17px 45px;
+    margin: 35px auto 0;
+    color: white;
+    background-color: var(--main-color);
+    text-decoration: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.pricing .contact-link:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+/* End Pricing */
+
+/* Start Subscribe */
+.subscribe {
+    padding: var(--section-padding) 0;
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+}
+.subscribe::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+}
+.subscribe .container {
+    position: relative;
+    color: white;
+    display: flex;
+}
+.subscribe form {
+    flex-basis: 1600px;
+    border: 1px solid white;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+    .subscribe form {
+        flex-basis: 0;
+        margin-bottom: 30px;
+    }
+}
+.subscribe form i {
+    font-size: 25px;
+    margin: 0 15px;
+}
+.subscribe form .inputs {
+    width: calc(100% - 3%);
+    display: flex;
+    align-self: stretch;
+}
+.subscribe form .inputs input[type="email"] {
+    background: none;
+    width: 75%;
+    border: none;
+    outline: none;
+    text-indent: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 17px 0px;
+    caret-color: var(--main-color);
+}
+.subscribe form .inputs input[type="email"]::placeholder {
+    color: #ddd;
+    opacity: 0.7;
+}
+.subscribe form .inputs input[type="submit"] {
+    padding: 0 38px;
+    border: none;
+    color: white;
+    background-color: var(--main-color);
+    width: calc(100% - 75%);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+@media (max-width: 767px) {
+    .subscribe form .inputs input[type="submit"] {
+        padding: 0 5px;
+        width: 40%;
+    }
+}
+.subscribe form .inputs input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.subscribe p {
+    line-height: 1.6;
+}
+/* End Subscribe */
+
+/* Start Contact */
+.contact {
+    padding: var(--section-padding) 0;
+}
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+}
+.contact .content form {
+    flex-basis: 70%;
+}
+.contact .content form .main-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+.contact .content form .main-input:focus {
+    outline: none;
+    border-color: var(--main-color);
+}
+.contact .content form textarea.main-input {
+    min-height: 200px;
+    resize: vertical;
+}
+.contact .content form input[type="submit"] {
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: auto;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.contact .content form input[type="submit"]:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.contact .content .info {
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+    .contact .content .info {
+        order: -1;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.contact .content .info h4 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contact .content .info span.phone {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.contact .content .info h4:last-of-type {
+    margin-top: 85px;
+}
+
+@media (max-width: 767px) {
+    .contact .content .info h4:last-of-type {
+        margin-top: 45px;
+    }
+}
+
+.contact .content .info address {
+    color: #777;
+    line-height: 2;
+}
+/* End Contact */
+
 /* Start Footer */
 .footer {
     position: relative;
     padding: calc(var(--section-padding) / 2) 0;
-    background-image: url("../images/subscribe.jpg");
+    background-image: url("../images/footer.jpg");
     background-size: cover;
     text-align: center;
     color: white;
